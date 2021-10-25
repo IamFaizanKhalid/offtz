@@ -60,7 +60,7 @@ func readTZFile(path string) {
 				}
 				_, offset := time.Now().In(loc).Zone()
 
-				appendIfMissing(timeZones[offset], tz)
+				timeZones[offset] = appendIfMissing(timeZones[offset], tz)
 			}
 		}
 	}
